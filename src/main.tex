@@ -10,7 +10,7 @@
 ]{scrbook}
 \setuptoc{toc}{totoc}
 
-\newcommand{\thesistitle}{MEAN Full Stack Web Engineering}
+\newcommand{\thesistitle}{Managing Complexity in Web Engineering}
 \newcommand{\thesistype}{D O K T O R A R B E I T}
 \newcommand{\thesistypedesc}{im Fachbereich Elektrotechnik/Informatik \\
     der Universität Kassel}
@@ -20,10 +20,10 @@
 \newcommand{\thesisauthormatrikelnumber}{XXXXXXXX}
 \newcommand{\thesisauthoremail}{a.kunz@uni-kassel.de}
 \newcommand{\thesisdepartment}{Fachgebiet Software Engineering}
-\newcommand{\thesisfirstreviewer}{Prof.\ Dr.\ TBD}
-\newcommand{\thesissecondreviewer}{Prof.\ Dr.\ TBD}
-\newcommand{\thesisthirdreviewer}{Prof.\ Dr.\ TBD}
-\newcommand{\thesisfourthreviewer}{Prof.\ Dr.\ TBD}
+\newcommand{\thesisfirstreviewer}{Prof.\ Dr.\ Oliver Hohlfeld}
+\newcommand{\thesissecondreviewer}{TBD}
+\newcommand{\thesisthirdreviewer}{TBD}
+\newcommand{\thesisfourthreviewer}{TBD}
 \newcommand{\thesisdate}{\today}
 
 \input{header}
@@ -33,19 +33,19 @@
     \pagenumbering{roman}
 
     \include{titlepage}
-    \include{declaration}
-    \include{abstract}
+    % \include{declaration}
+    % \include{abstract}
 
-    \tableofcontents
+    % \tableofcontents
 
-    \include{acronyms}
+    % \include{acronyms}
 
     \pagebreak
     \pagenumbering{arabic}
 
     % Hier weitere Kapitel einfügen
     \include{chapter/0-expose}
-    \include{chapter/1-introduction}
+    % \include{chapter/1-introduction}
 
     % Die nächsten zwei Zeilen sind optional, sie sorgen dafür dass alles nach dem Inhalt wieder mit römischen Zahlen nummeriert wird.
     \pagenumbering{roman}
@@ -54,11 +54,11 @@
     \bibliographystyle{alphadin}
     \bibliography{main}
 
-    \listoffigures
-    \listoftables
+    % \listoffigures
+    % \listoftables
     \renewcommand{\listoflistingscaption}{Listing-Verzeichnis}
-    \listoflistings
+    % \listoflistings
 
-    \appendix
-    \include{appendix}
+    % \appendix
+    % \include{appendix}
 \end{document}
