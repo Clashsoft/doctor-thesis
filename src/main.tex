@@ -29,27 +29,25 @@
 \input{header}
 
 \begin{document}
-
+    % ------------ Front Matter ------------
     \pagenumbering{roman}
 
     \include{titlepage}
     % \include{declaration}
     % \include{abstract}
-
     % \tableofcontents
-
     % \include{acronyms}
 
+    % ------------ Main Part ------------
     \pagebreak
     \pagenumbering{arabic}
 
-    % Hier weitere Kapitel einfügen
     \include{chapter/0-expose}
     % \include{chapter/1-introduction}
 
-    % Die nächsten zwei Zeilen sind optional, sie sorgen dafür dass alles nach dem Inhalt wieder mit römischen Zahlen nummeriert wird.
+    % ------------ Back Matter ------------
     \pagenumbering{roman}
-    \addtocounter{page}{4} % Dies ist die Anzahl der Seiten vor der Einleitung, muss möglicherweise angepasst werden, wenn das Inhaltsverzeichnis mehrere Seiten umfasst.
+    % \addtocounter{page}{4} % number of pages before introduction
 
     \bibliographystyle{alphadin}
     \bibliography{
