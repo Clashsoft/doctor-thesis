@@ -18,3 +18,4 @@ _minted-*/
 *.synctex.gz
 *.synctex(busy)
 *.toc
+.DS_Store
