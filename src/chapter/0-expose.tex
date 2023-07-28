@@ -9,57 +9,51 @@ Die Entwicklung von modernen Webanwendung erfordert die Kenntnis einer Vielzahl 
 Die Arbeit soll verschiedene Aspekte der Webentwicklung beleuchten und Best Practices, Werkzeuge und Bibliotheken bereitstellen, um diese Aspekte handhabbar und einsteigerfreundlich zu machen.
 Zunächst soll geklärt werden, welche existierenden und bewährten Frameworks eingesetzt werden können, um eine Grundlage zu bieten.
 Überlegungen zu klassisch getrennten Komponenten wie Frontend, Backend und Datenbank sollen im Kontext moderner Full-Stack-Entwicklung stets im Verbund geschehen.
-Dadurch wird die Kopplung erhöht, aber es kann doppelte Entwicklungsarbeit (sog. Boilerplate-Code) und Absprachen vermieden werden.
+Dadurch wird die Kopplung erhöht, aber es können doppelte Entwicklungsarbeit (sog. Boilerplate-Code) und Absprachen zwischen Teams vermieden werden.
 Ziel ist es, Webanwendungen für Anfänger sowie kleine und mittelständische Unternehmen (KMU) handhabbar zu machen und eine klare Abgrenzung zu großen Anwendungen und Microservices zu schaffen.
 Als beispielhafter Technologie-Stack wird zunächst der MEAN-Stack (MongoDB, Express, Angular, Node.js) betrachtet.
 Dabei soll auf folgende Aspekte in den jeweiligen Komponenten eingangen werden:
 
-\begin{itemize}
-    \item Projekteinrichtung (Nx)
-    \item Projektstruktur (Nx)
-    \item Ressourcenstruktur (REST)
-    \item Frontend (Angular)
-    \begin{itemize}
-        \item REST und GraphQL
-        \item Aktualisierung (SSE, WebSocket)
-        \item Formulare (insb.\ Validierung)
-        \item Listenansichten (insb.\ Filterung, Sortierung, Paginierung, Aktualisierung, Lazy Loading)
-        \item Detailansichten (insb.\ Aktualisierung, Kollaboration)
-        \item Authentifizierung (JWT)
-        \item Autorisierung (insb.\ Rollen, Rechte)
-        \item SEO (Angular Universal, insb.\ Prerendering)
-        \item PWA und Offline (Service Worker)
-        \item Monitoring (Sentry)
-        % \item Internationalisierung
-        % \item Logging
-        % \item Performance (Lighthouse)
-        % \item Accessibility (Lighthouse)
-        % \item Testing (insb. Unit, E2E)
-        % \item Deployment (insb. Docker, Kubernetes)
-        % \item Dokumentation (insb. Compodoc)
-        % \item CI/CD (insb. GitHub Actions)
-        % \item Security (z.B.\ CORS, CSP, CSRF, XSS, XSRF)
-        % \item Micro Frontends
-        % \item State Management (insb.\ NgRx)
-    \end{itemize}
-    \item Backend (NestJS)
-    \begin{itemize}
-        \item Authentifizierung (JWT)
-        \item Autorisierung (insb.\ Rollen, Rechte)
-        \item Datenbankanbindung (Mongoose)
-        \item Caching (Redis)
-        \item Messaging und Microservices (NATS)
-        \item Monitoring (Sentry)
-        \item Skalierung (insb.\ Load Balancing)
-        % \item Logging
-        % \item Security (z.B.\ CORS, CSP, CSRF, XSS, XSRF)
-        % \item Testing (insb.\ Unit, E2E)
-        % \item Deployment (insb.\ Docker, Kubernetes)
-        % \item Dokumentation (insb.\ Compodoc)
-        % \item CI/CD (insb.\ GitHub Actions)
-    \end{itemize}
-    \item Datenbank (MongoDB)
-\end{itemize}
+\begin{description}
+    \item[Projekteinrichtung und -Struktur.] Bei der Erstellung eines neuen Web-Projekts ist entscheidend, welche Tools für die Projekterstellung gewählt werden, da im Verlauf des Entwicklung ein Umzug aufwendig sein kann.
+    Besondere Schwerpunkte liegen hierbei auf Build-Zeiten, Wiederverwendbarkeit und Modularisierung von Code, Konfigurationsaufwand sowie Testing.
+    Im einem Projekt mit Angular und NestJS eignet sich Nx, da dies für Node.js-Projekte spezialisiert ist und ähnliche Konzepte bzgl. Codegenerierung eingesetzt werden.
+    \item[Datenbank, Datenhaltung und Datenzugriff.] Zur Planung von Frontend und Backend eignet sich die Definition von Datenstrukturen und deren Relationen, die Wahl einer geeigneten Datenbank und die Struktur der Endpunkte und damit verbundenen API und Zugriffsbeschränkung.
+    Es soll ermittelt werden, welche Arten von API (z.B. REST, GraphQL) für verschiedene Projekte geeignet sind oder gemischt werden können.
+    Während der Entwicklung können verschiedene Funktionen der Datenbank genutzt werden, um effizient auf Daten zuzugreifen, beispielsweise Aggregationen von MongoDB.
+    \item[Frontend.] Als benutzersichtbarer Teil einer Webanwendung umfasst das Frontend menschliche Aspekte und technische Hürden aufgrund der physischen Trennung zu Backend und Datenbank.
+    Bei Anwendungen mit nutzerspezifischen und -verknüpften Daten soll zunächst die Authentifizierung (z.B. mit JWT) und Autorisierung (z.B. Rollen- oder Rechtebasierte) beleuchtet werden.
+    In der Anwendung kann es Anforderungen für Suchen und Listenansichten mit Filtern, Sortierung, Paginierung und/oder Lazy Loading/Infinite Scrolling geben, die mit den vorgestellten Technologien umsetzbar sind.
+    Detailansichten von modernen Anwendungen können Kollaboration und Live-Aktualisierung unterstützen, welche mit WebSockets oder SSE umsetzbar sind.
+    Die Bearbeitung von Daten erfordert klassische Formulare, welche mit Validierung geprüft werden.
+    Darüber hinaus gibt es Meta-Anforderungen wie Performance, Accessibility, SEO und Prerendering, Offline-Mode und mobile Ansichten.
+    Diese sollen mit geeigneten Technologien umgesetzt werden.
+    Im Bereich der Security bieten moderne Browser bereits einige Features an, die jedoch von der Webanwendung korrekt implementiert werden müssen um Sicherheit zu bieten.
+    % \item Monitoring (Sentry)
+    % \item Internationalisierung
+    % \item Logging
+    % \item Testing (insb. Unit, E2E)
+    % \item Deployment (insb. Docker, Kubernetes)
+    % \item Dokumentation (insb. Compodoc)
+    % \item CI/CD (insb. GitHub Actions)
+    % \item Security (z.B.\ CORS, CSP, CSRF, XSS, XSRF)
+    % \item Micro Frontends
+    % \item State Management (insb.\ NgRx)
+    \item[Backend.] Für einige genannte Frontend-Features wird korrekte Unterstützung im Backend benötigt.
+    Dazu gehören insbesondere Authentifizierung und Autorisierung, welche andernfalls von Angreifern umgangen werden können.
+    Unter dem Aspekt der Performance sollen Techniken wie Caching und Skalierung betrachtet werden.
+    Da die zu entwickelnden Frontends die Aktualisierung und Kollaboration anbieten sollen, müssen im Backend die Datenbankanbindung mit Transaktionen o.ä. geplant und ggf. Event- oder Message-Systeme verwendet werden.
+    % \item Logging
+    % \item Security (z.B.\ CORS, CSP, CSRF, XSS, XSRF)
+    % \item Testing (insb.\ Unit, E2E)
+    % \item Deployment (insb.\ Docker, Kubernetes)
+    % \item Dokumentation (insb.\ Compodoc)
+    % \item CI/CD (insb.\ GitHub Actions)
+\end{description}
+
+Die geplanten Ziele sollen anhand von Messungen an bestehenden öffentlichen Websites und Open-Source-Repositories fundiert werden.
+Insbesondere können dort häufige Fehlerquellen diagnostiziert und mit geeigneten Techniken und Best Practices vermieden werden.
+Anhand von Lehrveranstaltungen und ggf. Expertengesprächen sollen die Lösungen erprobt und bekräftigt werden.
 
 \section{Zeitplan}\label{sec:zeitplan}
 
@@ -67,7 +61,7 @@ Dabei soll auf folgende Aspekte in den jeweiligen Komponenten eingangen werden:
 Im ersten Jahr sollen die Grundlagen recherchiert und mit der Konzeption begonnen werden.
 Als Grundlage dienen Expertengespräche, Befragungen und Lehrveranstaltungen.
 Im zweiten Jahr soll die Konzeption abgeschlossen und die Evaluation durchgeführt werden.
-Darunter fällt auch die Implementierung von Protypen, Bibliotheken und Werkzeugen.
+Darunter fällt auch die Implementierung von Protypen, Bibliotheken und Werkzeugen sowie Messungen von gängigen Praktiken bei öffentlichen Websites.
 Im dritten Jahr soll die Arbeit verschriftlich und abgeschlossen werden.
 Der Zeitplan ist vorläufig und kann sich im Laufe der Arbeit ändern.
 
