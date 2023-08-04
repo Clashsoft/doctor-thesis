@@ -1,31 +1,31 @@
 \section*{Motivation}\label{sec:motivation}
 
 Die Entwicklung von modernen Webanwendung erfordert die Kenntnis einer Vielzahl von Konzepten, Techniken, Werkzeugen und Frameworks.
-Die verteilte Architektur sorgt für Herausforderungen beim Darstellen, Bearbeiten und Synchronisierung von Daten und erfordert umfangreichen Implementierungsaufwand.
+Die verteilte Architektur sorgt für Herausforderungen beim Darstellen, Bearbeiten und Synchronisieren von Daten und erfordert umfangreichen Implementierungsaufwand.
 Ohne vollständige Kenntnisse über die breiten Aspekte können Sicherheitslücken oder Fehlerquellen entstehen sowie komplizierte und unübersichtlichte Codebases entstehen.
 Die Trennung von Frontend, Backend und Datenbank sorgt einerseits für die Vermeidung von Kopplung sowie die Trennung von Darstellung, Business Logic und Datenhaltung, fordert andererseits jedoch ein Verständnis der Kommunikation zwischen den Komponenten und vermeidet nicht deren monolithische Umsetzung.
-Die geplante Arbeit soll Netz der Webanwendungen entwirren und sie einstiegsfreundlicher, sicherer und verständlicher machen.
+Die geplante Arbeit soll das Netz der Webanwendungen entwirren und sie einstiegsfreundlicher, sicherer und verständlicher machen.
 
 \section*{Zielsetzung}\label{sec:zielsetzung}
 
 Die Arbeit soll verschiedene Aspekte der Webentwicklung beleuchten und Best Practices, Werkzeuge und Bibliotheken bereitstellen, um diese Aspekte handhabbar und einsteigerfreundlich zu machen.
 Zunächst soll geklärt werden, welche existierenden und bewährten Frameworks eingesetzt werden können, um eine Grundlage zu bieten.
 Überlegungen zu klassisch getrennten Komponenten wie Frontend, Backend und Datenbank sollen im Kontext moderner Full-Stack-Entwicklung stets im Verbund geschehen.
-Dadurch wird die Kopplung erhöht, aber es können doppelte Entwicklungsarbeit (sog. Boilerplate-Code) und Absprachen zwischen Teams vermieden werden.
+Dadurch wird die Kopplung erhöht, aber es können doppelte Entwicklungsarbeit (sog. Boilerplate-Code) vermieden und der Kommunikationsaufwand zwischen Teams reduziert werden.
 Ziel ist es, Webanwendungen für Anfänger sowie kleine und mittelständische Unternehmen (KMU) handhabbar zu machen und eine klare Abgrenzung zu großen Anwendungen zu schaffen.
 Als beispielhafte Technologie-Grundlage wird zunächst der MEAN-Stack (MongoDB, Express, Angular, Node.js) betrachtet.
-Als Abstraktionsebene über Express wird NestJS verwendet, da dies einen ähnlichen Aufbau zu Angular bietet.
+Als Abstraktionsebene über Express wird NestJS verwendet, da dies einen ähnlichen Aufbau wie Angular bietet.
 Dabei soll auf folgende Aspekte in den jeweiligen Komponenten eingangen werden:
 
 \begin{description}
     \item[Projekteinrichtung und -Struktur.] Bei der Erstellung eines neuen Web-Projekts ist entscheidend, welche Tools für die Projekterstellung gewählt werden, da im Verlauf des Entwicklung ein Umzug aufwendig sein kann.
     Besondere Schwerpunkte liegen hierbei auf Build-Zeiten, Wiederverwendbarkeit und Modularisierung von Code, Konfigurationsaufwand sowie Testing.
-    Im einem Projekt mit Angular und NestJS eignet sich Nx, da dies für Node.js-Projekte spezialisiert ist und ähnliche Konzepte bzgl. Codegenerierung eingesetzt werden.
+    In einem Projekt mit Angular und NestJS eignet sich Nx, da dies für Node.js-Projekte spezialisiert ist und ähnliche Konzepte bzgl. Codegenerierung eingesetzt werden.
     \item[Datenbank, Datenhaltung und Datenzugriff.] Zur Planung von Frontend und Backend eignet sich die Definition von Datenstrukturen und deren Relationen, die Wahl einer geeigneten Datenbank und die Struktur der Endpunkte und damit verbundenen API und Zugriffsbeschränkung.
     Es soll ermittelt werden, welche Arten von API (z.B. REST, GraphQL) für verschiedene Projekte geeignet sind oder nach Anwendungszweck gemischt werden können.
     Während der Entwicklung können verschiedene Funktionen der Datenbank genutzt werden, um effizient auf Daten zuzugreifen, beispielsweise Aggregationen von MongoDB.
     \item[Frontend.] Als benutzersichtbarer Teil einer Webanwendung umfasst das Frontend menschliche Aspekte und technische Hürden aufgrund der physischen Trennung zu Backend und Datenbank.
-    Bei Anwendungen mit nutzerspezifischen und -verknüpften Daten soll zunächst die Authentifizierung (z.B. mit JWT) und Autorisierung (z.B. Rollen- oder Rechtebasierte) beleuchtet werden.
+    Bei Anwendungen mit nutzerspezifischen und -verknüpften Daten soll zunächst die Authentifizierung (z.B. mit JWT) und Autorisierung (z.B. rollen- oder rechtebasiert) beleuchtet werden.
     In der Anwendung kann es Anforderungen für Suchen und Listenansichten mit Filtern, Sortierung, Paginierung und/oder Lazy Loading/Infinite Scrolling geben, die mit den vorgestellten Technologien umsetzbar sind.
     Detailansichten von modernen Anwendungen können Kollaboration und Live-Aktualisierung unterstützen, welche mit WebSockets oder SSE realisiert werden können.
     Die Bearbeitung von Daten erfordert klassische Formulare, welche mit client- und serverseitiger Validierung geprüft werden.
@@ -71,15 +71,15 @@ Mögliche erste Ansätze und Fragestellungen zu diesem Thema sind Folgende:
     In welchem Maße werden moderne Web-Standards wie HTTP/2 Push oder HTTP/3 verwendet, um Seitenladenzeiten und UX zu verbessern?
     Inwiefern helfen CDNs bei der Verfügbarkeit und Resilienz von Websites?
     \item[Instrospektion von Backends.]
-    Wie können Analysen, die Frontend-seitig durch die Verfügbarkeit des JavaScript-Codes, auf das Backend angewandt werden?
+    Wie können Analysen, die Frontend-seitig durch die Verfügbarkeit des JavaScript-Codes möglich sind, auf das Backend angewandt werden?
     Können mithilfe von API-Beschreibung, Frontend-Verhalten oder Blackbox-Tests die Funktionalität, Fehler und Sicherheitslücken von Backends ermittelt werden?
     Wie können Open-Source-Repositories in die Untersuchung einbezogen werden?
 \end{description}
 
 Aufbauend auf den Ergebnissen dieser Untersuchung sollen Ansätze und Lösungen ermittelt werden, um häufige Probleme zu vermeiden.
-Anhand von Lehrveranstaltungen und ggf. Expertengesprächen sollen die Lösungen erprobt und bekräftigt werden.
+Anhand von Lehrveranstaltungen und ggf. Expertengesprächen sollen die Lösungen erprobt und mit verherigen Messungen verglichen werden.
 Dies soll der Beantwortung der zentralen Forschungsfrage der Arbeit dienen:
-Wie kann die Vielzahl moderner Webtechnologien unter Beachtung der Aspekte Effizienz, Sicherheit, Entwicklungsproduktivität und User Experience für den Einzelnen und Teams von Webentwicklern handhabbar gemacht werden.
+Wie kann die Vielzahl moderner Webtechnologien unter Beachtung der Aspekte Effizienz, Sicherheit, Entwicklungsproduktivität und User Experience für den Einzelnen und Teams von Webentwicklern handhabbar gemacht werden?
 
 \section*{Zeitplan}\label{sec:zeitplan}
 
