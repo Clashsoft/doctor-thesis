@@ -1,0 +1,34 @@
+\documentclass[
+    %draft,
+    pdftex,
+    a4paper,
+    parskip,
+    hyperfootnotes=false
+]{scrbook}
+
+\newcommand{\thesistitle}{Handling Complexity in Web Engineering}
+\newcommand{\thesistype}{Exposé zur\\D I S S E R T A T I O N}
+\newcommand{\thesistypedesc}{im Fachbereich Elektrotechnik/Informatik \\
+    der Universität Kassel\\am \thesisdepartment}
+\newcommand{\thesisauthorname}{Adrian Kunz}
+\newcommand{\thesisauthorhomestreet}{XXX}
+\newcommand{\thesisauthorhometown}{34121 Kassel}
+\newcommand{\thesisauthoremail}{a.kunz@uni-kassel.de}
+\newcommand{\thesisdepartment}{Fachgebiet Software Engineering}
+\newcommand{\thesisfirstreviewer}{Prof.\ Dr.\ Oliver Hohlfeld}
+\newcommand{\thesissecondreviewer}{TBD}
+\newcommand{\thesisthirdreviewer}{TBD}
+\newcommand{\thesisfourthreviewer}{TBD}
+\newcommand{\thesisdate}{\today}
+
+\PassOptionsToPackage{ngerman}{babel}
+\input{header}
+
+\addbibresource[glob]{bibliography/*.bib}
+\addbibresource{main.bib}
+
+\begin{document}
+    \include{titlepage}
+    \include{expose/0-expose}
+    \printbibliography
+\end{document}
