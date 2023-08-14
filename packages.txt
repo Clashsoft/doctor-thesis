@@ -1,0 +1,13 @@
+footmisc
+siunitx
+paralist
+wrapfig
+minted
+acronym
+xstring
+bigfoot
+csquotes
+din1505
+pdflscape
+bibtex
+biber

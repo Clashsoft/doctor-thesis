@@ -4,10 +4,15 @@
 
 1. [TeX Live](https://www.tug.org/texlive/) installieren
 
-2. Folgende Packages müssen zunächst installiert werden:
+2. Die Packages aus packages.txt müssen zunächst installiert werden. Dazu kann folgender Befehl verwendet werden:
 
    ```sh
-   $ tlmgr install footmisc siunitx paralist wrapfig minted acronym xstring bigfoot csquotes din1505 pdflscape bibtex biber
+   # Linux/macOS
+   $ xargs tlmgr install < packages.txt
+   # Windows (cmd)
+   > for /F %i in (packages.txt) do tlmgr install %i
+   # Windows (PowerShell)
+   PS> Get-Content packages.txt | ForEach-Object { tlmgr install $_ }
    ```
 
    Bei macOS muss evtl. `sudo` und bei Windows `Als Administrator ausführen` verwendet werden.
