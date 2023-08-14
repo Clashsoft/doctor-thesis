@@ -14,12 +14,12 @@ jobs:
           root_file: main.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
-      - name: bibtex main
+      - name: biber main
         uses: dante-ev/latex-action@latest
         with:
           working-directory: src
-          root_file: main.aux
-          compiler: bibtex
+          root_file: main.tex
+          compiler: biber
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
         with:
