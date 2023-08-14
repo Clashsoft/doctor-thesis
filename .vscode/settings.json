@@ -49,5 +49,36 @@
         "Modalfensters",
         "Tokenisierung",
         "Wireframes"
-    ]
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        ".idea/": true,
+        "out/": true,
+        "auxil/": true,
+        "**/_minted-*/": true,
+        "**/*.aux": true,
+        "**/*.bbl": true,
+        "**/*.blg": true,
+        "**/*.docx": true,
+        "**/*.lof": true,
+        "**/*.log": true,
+        "**/*.lol": true,
+        "**/*.lot": true,
+        "**/*.out": true,
+        "**/*.pyg": true,
+        "**/*.synctex.gz": true,
+        "**/*.synctex(busy)": true,
+        "**/*.toc": true,
+        "**/*.run.xml": true,
+        "**/*.bcf": true
+    }
 }
