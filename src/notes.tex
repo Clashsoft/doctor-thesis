@@ -1,0 +1,37 @@
+\documentclass[
+    draft,
+    pdftex,
+    a4paper,
+]{scrbook}
+
+\newcommand{\thesistitle}{Handling Complexity in Web Engineering}
+\newcommand{\thesistype}{Notizen zur\\D I S S E R T A T I O N}
+\newcommand{\thesistypedesc}{im Fachbereich Elektrotechnik/Informatik \\
+    der Universität Kassel\\am \thesisdepartment}
+\newcommand{\thesisauthorname}{Adrian Kunz}
+\newcommand{\thesisauthorhomestreet}{XXX}
+\newcommand{\thesisauthorhometown}{34121 Kassel}
+\newcommand{\thesisauthoremail}{a.kunz@uni-kassel.de}
+\newcommand{\thesisdepartment}{Fachgebiet Software Engineering}
+\newcommand{\thesisfirstreviewer}{Prof.\ Dr.\ Oliver Hohlfeld}
+\newcommand{\thesissecondreviewer}{TBD}
+\newcommand{\thesisthirdreviewer}{TBD}
+\newcommand{\thesisfourthreviewer}{TBD}
+\newcommand{\thesisdate}{\today}
+
+\input{header}
+
+\begin{document}
+    \include{titlepage}
+    \nocite{*}
+
+    \bibliographystyle{alphadin}
+    \bibliography{
+        bibliography/empirical-se,
+        bibliography/mean-stack,
+        bibliography/webassembly,
+        bibliography/web-complexity,
+        bibliography/web-engineering,
+        main
+    }
+\end{document}
