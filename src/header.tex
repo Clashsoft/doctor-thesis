@@ -2,9 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
-\usepackage{xcolor}
-
-\defaulthyphenchar=127 % Dadurch werden auch Wörter mit Bindestrich getrennt, die schon Bindestriche enthalten.
 
 % geometry
 \usepackage[bindingoffset=1cm, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
@@ -19,21 +16,34 @@
 
 \RedeclareSectionCommand[beforeskip=1.5cm,afterskip=1cm]{chapter}
 
+% Landscape pages
 \usepackage{pdflscape}
 
 % Colors
 \usepackage{color}
 \usepackage{colortbl}
+\usepackage{xcolor}
 
 % Tables
 \usepackage{tabularx}
 \usepackage{multirow}
 \setlength{\tabcolsep}{4pt}
+\usepackage{booktabs}
+% Frequently used column types
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % centering column type with fixed width
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % right aligned column type with fixed width
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % left aligned column type with fixed width
 
 % Drawing graphs etc.
 \usepackage{pgf}
 \usepackage{tikz}
 \usetikzlibrary{arrows,automata}
+
+% References
+\usepackage[
+    backend=biber,
+    style=alphabetic
+]{biblatex}
 
 % Footnotes
 \usepackage{footmisc}
@@ -50,10 +60,14 @@
 
 % Figures
 \usepackage{graphicx, wrapfig}
+\usepackage{caption}
+\usepackage[hypcap=true,labelformat=simple]{subcaption}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
 
 % Hyperlinks
-\usepackage[hyphens]{url}
+\PassOptionsToPackage{hyphens}{url}
 \usepackage{hyperref}
+\usepackage{url}
 \hypersetup{colorlinks, citecolor=black, linkcolor=black, urlcolor=black}
 
 % Minted
@@ -72,8 +86,10 @@
 \usepackage{setspace}
 \onehalfspacing              % anderthalbzeilig (oder auch \doublespace)
 
+% Various fixes
 \usepackage{csquotes}
 \MakeOuterQuote{"} % Damit ist es möglich, " " zu verwenden ohne Umlaut zu erzeugen
+\defaulthyphenchar=127 % Dadurch werden auch Wörter mit Bindestrich getrennt, die schon Bindestriche enthalten.
 
 %fancyBox
 %\usepackage{fancybox}
@@ -83,22 +99,3 @@
 % Layout corrections (Hurenkinder)
 \widowpenalty = 10000
 \displaywidowpenalty = 10000
-
-% Figures
-\usepackage{caption}
-\usepackage[hypcap=true,labelformat=simple]{subcaption}
-\renewcommand{\thesubfigure}{(\alph{subfigure})}
-
-% Tables
-\usepackage{booktabs}
-
-% Frequently used column types
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % centering column type with fixed width
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % right aligned column type with fixed width
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % left aligned column type with fixed width
-
-% References
-\usepackage[
-    backend=biber,
-    style=alphabetic
-]{biblatex}
