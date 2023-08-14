@@ -4,7 +4,7 @@
             "name": "pdflatex",
             "tools": [
                 "pdflatex",
-                "bibtex",
+                "biber",
                 "pdflatex",
                 "pdflatex"
             ]
@@ -26,6 +26,14 @@
         {
             "name": "bibtex",
             "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "biber",
+            "command": "biber",
             "args": [
                 "%DOCFILE%"
             ],

@@ -26,6 +26,8 @@
 \newcommand{\thesisdate}{\today}
 
 \input{header}
+\addbibresource[glob]{bibliography/*.bib}
+\addbibresource{main.bib}
 
 \begin{document}
     % ------------ Front Matter ------------
@@ -48,16 +50,7 @@
     \pagenumbering{roman}
     % \addtocounter{page}{4} % number of pages before introduction
 
-    \bibliographystyle{alphadin}
-    \bibliography{
-        bibliography/empirical-se,
-        bibliography/mean-stack,
-        bibliography/webassembly,
-        bibliography/web-complexity,
-        bibliography/web-engineering,
-        main
-    }
-
+    \printbibliography
     % \listoffigures
     % \listoftables
     \renewcommand{\listoflistingscaption}{Listing-Verzeichnis}

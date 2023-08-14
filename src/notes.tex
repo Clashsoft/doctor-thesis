@@ -20,18 +20,12 @@
 \newcommand{\thesisdate}{\today}
 
 \input{header}
+\addbibresource[glob]{bibliography/*.bib}
+\addbibresource{main.bib}
 
 \begin{document}
     \include{titlepage}
-    \nocite{*}
+    \include{notes/1-literature}
 
-    \bibliographystyle{alphadin}
-    \bibliography{
-        bibliography/empirical-se,
-        bibliography/mean-stack,
-        bibliography/webassembly,
-        bibliography/web-complexity,
-        bibliography/web-engineering,
-        main
-    }
+    \printbibliography
 \end{document}

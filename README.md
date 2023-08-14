@@ -7,7 +7,7 @@
 2. Folgende Packages müssen zunächst installiert werden:
 
    ```sh
-   $ tlmgr install footmisc siunitx paralist wrapfig minted acronym xstring bigfoot csquotes din1505 pdflscape
+   $ tlmgr install footmisc siunitx paralist wrapfig minted acronym xstring bigfoot csquotes din1505 pdflscape bibtex biber
    ```
 
    Bei macOS muss evtl. `sudo` und bei Windows `Als Administrator ausführen` verwendet werden.
