@@ -35,28 +35,27 @@
     \pagenumbering{roman}
 
     \include{titlepage}
-    % \include{declaration}
-    % \include{abstract}
-    % \tableofcontents
-    % \include{acronyms}
+    \include{declaration}
+    \include{abstract}
+    \tableofcontents
+    \include{acronyms}
 
     % ------------ Main Part ------------
     \pagebreak
     \pagenumbering{arabic}
 
-    \include{chapter/0-expose}
-    % \include{chapter/1-introduction}
+    \include{chapter/1-introduction}
 
     % ------------ Back Matter ------------
     \pagenumbering{roman}
-    % \addtocounter{page}{4} % number of pages before introduction
+    \addtocounter{page}{4} % number of pages before introduction
 
     \printbibliography
-    % \listoffigures
-    % \listoftables
+    \listoffigures
+    \listoftables
     \renewcommand{\listoflistingscaption}{Listing-Verzeichnis}
-    % \listoflistings
+    \listoflistings
 
-    % \appendix
-    % \include{appendix}
+    \appendix
+    \include{appendix}
 \end{document}
