@@ -10,20 +10,23 @@ jobs:
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: src/main.tex
+          working-directory: src
+          root_file: main.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       - name: bibtex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: src/main.aux
+          working-directory: src
+          root_file: main.aux
           compiler: bibtex
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: src/main.tex
+          working-directory: src
+          root_file: main.tex
           compiler: pdflatex
-          args: -interaction=nonstopmode -shell-escape
+          args: -interaction=nonstopmode -shell-escape -file-line-error
       - name: upload pdf
         uses: actions/upload-artifact@v2
         with:
