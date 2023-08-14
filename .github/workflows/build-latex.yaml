@@ -20,6 +20,7 @@ jobs:
           working_directory: src
           root_file: main.tex
           compiler: biber
+          args: main
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
         with:
